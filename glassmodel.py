@@ -23,6 +23,13 @@ print(df.head())
 #Ba: Barium
 #Fe: Iron
 
+# 1 buildingwindowsfloatprocessed 
+# 2 buildingwindowsnonfloatprocessed 
+# 3 vehiclewindowsfloatprocessed 
+# 4 vehiclewindowsnonfloatprocessed 
+# 5 containers 
+# 6 tableware 
+# 7 headlamps
 print(df.Ba.unique())
 print(df.shape)
 
