@@ -9,36 +9,45 @@
 
 <body>
 
-    <div style="color:rgb(133, 133, 226)">
+    <div style="color:rgb(204, 204, 219)">
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>Predictive analysis</h2>
+            <h2>Predictive Analysis: Classification of Glass</h2>
+
+            <p>The following form is part of my first end to end machine learning project ever. The aim of this project is to classify the type of glass based on the refractive index as well as the proportion of each of it's constituent elements. Although this data would usually be impractical to get, the project is pretty much just for the sake of learning and practicing.</p>
+            <br>
+            <p>The data used for training and testing the model was obtained from the <a href="https://www.kaggle.com/uciml/glass">Glass Classification by UCI Machine Learning</a> dataset on Kaggle.<p>
+            <br>
+            <p>The classification algorithm used here is the XGBoost Classification Algorithm and, after testing, I found the accuracy to be around 93%</p>
+            <br>
 
             <h3>Refractive Index</h3>
             <input id="ref_index" name="ref_index" type="number ">
 
-            <h3>What is the amount of Sodium? (With decimal precision)</h3><br><input id="sodium" name="sodium" required="required">
+            <h3>Amount of Sodium (With decimal precision)</h3><br><input id="sodium" name="sodium" required="required">
 
-            <h3>What is the amount of Magnesium? (With decimal precision)</h3><br><input id="magnesium" name="magnesium" required="required">
+            <h3>Amount of Magnesium? (With decimal precision)</h3><br><input id="magnesium" name="magnesium" required="required">
 
-            <h3>What is the amount of Alluminium? (With decimal precision)</h3><br><input id="alum" name="alum" required="required">
+            <h3>Amount of Alluminium? (With decimal precision)</h3><br><input id="alum" name="alum" required="required">
 
-            <h3>What is the amount of Silicon? (With decimal precision)</h3><br><input id="silicon" name="silicon" required="required">
+            <h3>Amount of Silicon? (With decimal precision)</h3><br><input id="silicon" name="silicon" required="required">
 
-            <h3>What is the amount of Potassium? (With decimal precision)</h3><br><input id="potash" name="potash" required="required">
+            <h3>Amount of Potassium? (With decimal precision)</h3><br><input id="potash" name="potash" required="required">
 
-            <h3>What is the amount of Calcium? (With decimal precision)</h3><br><input id="calcium" name="calcium" required="required">
+            <h3>Amount of Calcium? (With decimal precision)</h3><br><input id="calcium" name="calcium" required="required">
 
-            <h3>What is the amount of Barium? (With decimal precision)</h3><br><input id="barium" name="barium" required="required">
+            <h3>Amount of Barium? (With decimal precision)</h3><br><input id="barium" name="barium" required="required">
 
-            <h3>What is the amount of Iron? (With decimal precision)</h3><br><input id="iron" name="iron" required="required">
+            <h3>Amount of Iron? (With decimal precision)</h3><br><input id="iron" name="iron" required="required">
 
             
-            <br><br><button id="sub" type="submit ">Classify the glass!</button>
+            <br><br><button id="sub" type="submit ">Classify</button>
             <br>
-
-
-
-
+            <br>
+            <a href="https://www.kaggle.com/aryanbhobe">My Kaggle Profile</a>
+            <br>
+            <a href="https://github.com/isaac-aryan">My GitHub Profile</a>  
+            <br>
+            
         </form>
 
 
@@ -51,7 +60,8 @@
 
     <style>
         body {
-            background-color: rgb(20, 20, 20);
+            background-color: rgb(0, 0, 0);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             text-align: center;
             padding: 0px;
         }
@@ -67,7 +77,7 @@
             border-radius: 60px;
             border-color: 45px;
             border-style: solid;
-            font-family: cursive;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             text-align: center;
             background-color: rgb(168, 131, 61);
             font-size: medium;
@@ -81,40 +91,16 @@
             font-size: 14px;
         }
         
-        #fuel {
-            width: 83px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 20px;
+        a:link {
+            color: rgb(129, 216, 231); 
+            background-color: transparent; 
+            text-decoration: none;
         }
-        
-        #fuel:hover {
-            background-color: coral;
-        }
-        
-        #research {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #research:hover {
-            background-color: coral;
-        }
-        
-        #resea {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #resea:hover {
-            background-color: coral;
+
+        a:visited {
+            color: rgb(226, 122, 122);
+            background-color: transparent;
+            text-decoration: none;
         }
         
         #sub {
@@ -128,34 +114,7 @@
         #sub:hover {
             background-color: darkcyan;
         }
-        
-        #first {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #second {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #third {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #fourth {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
+
     </style>
 </body>
 
